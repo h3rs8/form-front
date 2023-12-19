@@ -1,0 +1,35 @@
+.full-width {
+    width: 100%;
+}
+
+.bground {
+    background-color: #BCAF9C;
+}
+
+.eerie {
+    background-color: #08042c;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+
+.violet {
+    color: #ce8ffb;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: #f5f5f5;
+}
+.full-height{
+    height: 50rem;
+}
+.example-card{
+    background-color: #6864b1; 
+}
