@@ -20,8 +20,10 @@ export class AppComponent {
     
 
   }
+  b:any = false;
+  
   formSubmit(){
-
+    
     if(parseInt(this.userData.age)<18 || parseInt( this.userData.age)>65){
       this.snack.open("Age should be between 18 and 65",'', { duration: 3000 });
       return;
@@ -34,14 +36,17 @@ export class AppComponent {
       this.snack.open("Enter correct UPI id",'', { duration: 3000 });
       return;
     }
-
+    this.b=true;
     this._user.submitApp(this.userData).subscribe((response)=>{ 
       
       
       
       if(response.status==202)
+      this.b=false;
       this.snack.open("Application Submitted Successfully",'', { duration: 3000 });
+      
     },(error)=>{
+      this.b=false;
       if(error.status==302){
         this.snack.open("Application Already Exists",'', { duration: 3000 });
       }
